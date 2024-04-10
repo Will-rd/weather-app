@@ -11,10 +11,12 @@ console.log("ITS GON RAIN!")
 
 var cityNameInput = document.querySelector('#input-box');
 var searchBtn = document.getElementById('search-btn');
+// var cardsBox = document.getElementById('cards-box');
 
 
 function getLongLat() {
     var cardsBox = document.getElementById('cards-box')
+    
     
 
     var getCity = cityNameInput.value
@@ -35,7 +37,7 @@ function getLongLat() {
         .then(function (data) {
             console.log(data);
             var cardEl = document.createElement('h2');
-            cardEl.setAttribute("class", "p-3 mb-2 bg-dark text-info font-weight-bold");
+            cardEl.setAttribute("class", "card p-3 mb-2 bg-dark text-info font-weight-bold");
             cardEl.setAttribute("style", "width: 20rem");
             // cardEl.textContent = "Today's weather:";
 
@@ -64,7 +66,12 @@ function getLongLat() {
 
 
 searchBtn.addEventListener("click", function (event) {
+    var oldCard = document.querySelector('.card');
+    if(oldCard) {
+        oldCard.remove();
+    }
     event.preventDefault();
+    
     getLongLat();
 })
 // getLongLat();
