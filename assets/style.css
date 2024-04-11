@@ -9,7 +9,8 @@ header {
 
 aside {
     max-width: 350px;
-    min-height: 400px;
+    min-height: 100px;
+    max-height: fit-content;
     background-color: lightgray;
     justify-content: center;
     align-items: flex-start;
@@ -27,5 +28,11 @@ button {
     max-width: 200px;
     max-height: 40px;
     margin: 5% 0;
+    justify-content: space-between;
+}
+
+#forecast-box {
+    display: flex;
+    min-width: fit-content;
     justify-content: space-between;
 }
