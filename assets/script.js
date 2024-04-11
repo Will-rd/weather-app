@@ -21,7 +21,7 @@ function getLongLat() {
 
 
     var getCity = cityNameInput.value
-    var url = "http://api.openweathermap.org/geo/1.0/direct?q=" + getCity + "&limit=1&appid=8ae331534e5d504cddf6268ac4ef3357"
+    var url = "https://api.openweathermap.org/geo/1.0/direct?q=" + getCity + "&limit=1&appid=8ae331534e5d504cddf6268ac4ef3357"
     fetch(url)
         .then(function (response) {
             return response.json();
