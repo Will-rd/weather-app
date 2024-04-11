@@ -47,7 +47,7 @@ function getLongLat() {
                     cardEl.appendChild(dateBox);
 
                     var weatherIcon = document.createElement('img');
-                    weatherIcon.setAttribute("src", `/assets/icons/${data.list[0].weather[0].icon}.png`)
+                    weatherIcon.setAttribute("src", `./assets/icons/${data.list[0].weather[0].icon}.png`)
                     weatherIcon.setAttribute("style", "width: 40px")
                     cardEl.appendChild(weatherIcon);
 
@@ -76,7 +76,7 @@ function getLongLat() {
                         forCardEl.appendChild(forDateBox);
 
                         var forWeatherIcon = document.createElement('img');
-                        forWeatherIcon.setAttribute("src", `/assets/icons/${data.list[i].weather[0].icon}.png`)
+                        forWeatherIcon.setAttribute("src", `./assets/icons/${data.list[i].weather[0].icon}.png`)
                         forWeatherIcon.setAttribute("style", "width: 40px")
                         forCardEl.appendChild(forWeatherIcon);
 
